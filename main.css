@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* || REST */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+/* || VARIABLES */
+:root {
+  /* COLORS */
+  --WHITE: #FFFFFF;
+  --RED: #EA5454;
+  --GREEN: #44D3D2;
+  --YELLOW: #FCAE4A;
+  --BLUE: #549EF2;
+  --GRAY: #4D4F62;
+  --GRAY-50: hsla(234, 12%, 34%, 0.50);
+
+  /* SHADOW */
+  --CARD-SHADOW: 0rem .9375rem 1.875rem -0.6875rem hsla(213, 47%, 67%, 0.50);
+
+  /* TYPOGRAPHY */
+  --FF: "Poppins", serif;
+
+  /* TEXT-PRESET */
+  /* MOBILE */
+  --TITLE-LIGHT-MOB: 200 1.5rem var(--FF);
+  --TITLE-BOLD-MOB: 600 1.5rem var(--FF);
+  
+  /* DESKTOP */
+  --TITLE-LIGHT: 200 2.25rem var(--FF);
+  --TITLE-BOLD: 600 2.25rem var(--FF);
+  --HEADER-BOBY: normal .9375rem/1.5625rem var(--FF);
+  --CARD-TITLE: 600 1.25rem var(--FF);
+  --CARD-TEXT: normal .8125rem/1.4375rem var(--FF);
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+/* MOBILE FIRST DESIGN */
+/* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  display: grid;
+  place-content: center;
+  background-color: var(--WHITE);
+  padding: 5.3125rem 2rem 4.875rem 2rem;
+}
+
+.tech-card {
+    display: flex;
+    flex-flow: column;
+    gap: 4.75rem;
+}
+
+/* HEADER */
+.tech-card__header {
+    max-width: 311px;
+    height: 161px;
+}
+
+.tech-card__header-title {
+    font: var(--TITLE-LIGHT-MOB);
+    color: var(--GRAY);
+    letter-spacing: .0106rem;
+    margin-bottom: .0625rem;
+}
+
+.tech-card__header-title2 {
+    font: var(--TITLE-BOLD-MOB);
+    color: var(--GRAY);
+    letter-spacing: .0106rem;
+    margin-bottom: 1rem;
+}
+
+.tech-card__header-subtext {
+    font: var(--HEADER-BOBY);
+    color: var(--GRAY-50);
+    letter-spacing: .0063rem;
+}
+
+/* MAIN CARD */
+.tech-card__main {
+    max-width: 311px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.tech-card__main-card {
+    max-width: 311px;
+    height: 222px;
+    padding: 1.6875rem 1.75rem 1.75rem 1.75rem;
+    box-shadow: var(--CARD-SHADOW);
+    background-color: var(--WHITE);
+    border-radius: .5rem;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+}
+
+.main-card__title {
+    font: var(--CARD-TITLE);
+    color: var(--GRAY);
+    margin-bottom: .0625rem;
+}
+
+.main-card__subtext {
+    font: var(--CARD-TEXT);
+    color: var(--GRAY-50);
+    margin-bottom: 2.0625rem;
+    letter-spacing: .0056rem;
+}
+
+.main-card__icon {
+    width: 57px;
+    height: 57px;
+    position: absolute;
+    bottom: 28px;
+    right: 28px;
+}
+
+.main-card__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.green {
+    margin-bottom: 1.5625rem;
+    border-top: 5px solid var(--GREEN);
+}
+
+.red {
+    margin-bottom: 1.4375rem;
+    border-top: 5px solid var(--RED);
+}
+
+.yellow {
+    margin-bottom: 1.5rem;
+    border-top: 5px solid var(--YELLOW);
+}
+
+.blue {
+    border-top: 5px solid var(--BLUE);
+}
+
+/* DESKTOP */
+@media screen and (min-width: 992px) {
+    body {
+        padding: 5rem auto 5rem auto;
+      }
+
+    /* CARD */
+    .tech-card {
+        display: flex;
+        flex-flow: column;
+        gap: 4rem;
+        border: .125rem solid black;
+    }
+
+    /* HEADER */
+    .tech-card__header {
+        max-width: 540px;
+        height: 168px;
+    }
+
+    .tech-card__header-title {
+        font: var(--TITLE-LIGHT);
+        letter-spacing: .0156rem;
+    }
+
+    .tech-card__header-title2 {
+        font: var(--TITLE-BOLD);
+        letter-spacing: .0156rem;
+        margin-bottom: .8125rem;
+    }
+
+    .tech-card__header-subtext {
+        max-width: 540px;
+    }
+
+    /* MAIN CARD */
+    .tech-card__main {
+        border: 2px solid blue;
+        max-width: 1110px;
+        display: flex;
+        flex-flow: column;
+    }
+    
+    .tech-card__main-card {
+        max-width: 311px;
+        height: 222px;
+        padding: 1.6875rem 1.75rem 1.75rem 1.75rem;
+        box-shadow: var(--CARD-SHADOW);
+        background-color: var(--WHITE);
+        border-radius: .5rem;
+        display: flex;
+        flex-flow: column;
+        position: relative;
+    }
+    
+    .main-card__title {
+        font: var(--CARD-TITLE);
+        color: var(--GRAY);
+        margin-bottom: .0625rem;
+    }
+    
+    .main-card__subtext {
+        font: var(--CARD-TEXT);
+        color: var(--GRAY-50);
+        margin-bottom: 2.0625rem;
+        letter-spacing: .0056rem;
+    }
+    
+    .main-card__icon {
+        width: 57px;
+        height: 57px;
+        position: absolute;
+        bottom: 28px;
+        right: 28px;
+    }
+    
+    .main-card__icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .green {
+        margin-bottom: 1.5625rem;
+        border-top: 5px solid var(--GREEN);
+    }
+    
+    .red {
+        margin-bottom: 1.4375rem;
+        border-top: 5px solid var(--RED);
+    }
+    
+    .yellow {
+        margin-bottom: 1.5rem;
+        border-top: 5px solid var(--YELLOW);
+    }
+    
+    .blue {
+        border-top: 5px solid var(--BLUE);
+    }
+}
