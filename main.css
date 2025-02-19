@@ -124,35 +124,28 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
-    position: relative;
+}
+
+.container {
+    height: 4px;
+    width: 100%;
+    border-radius: .5rem .5rem 0rem 0rem ;
 }
 
 .green-main {
     background-color: var(--GREEN);
-    height: 4px;
-    width: 100%;
-    border-radius: .5rem .5rem 0rem 0rem ;
 }
 
 .red-main {
     background-color: var(--RED);
-    height: 4px;
-    width: 100%;
-    border-radius: .5rem .5rem 0rem 0rem ;
 }
 
 .yellow-main {
     background-color: var(--YELLOW);
-    height: 4px;
-    width: 100%;
-    border-radius: .5rem .5rem 0rem 0rem ;
 }
 
 .blue-main {
     background-color: var(--BLUE);
-    height: 4px;
-    width: 100%;
-    border-radius: .5rem .5rem 0rem 0rem ;
 }
 
 .tech-card__main-card {
@@ -265,7 +258,6 @@ body {
     
     .green {
         margin-bottom: 0rem;
-
     }
     
     .red {
