@@ -126,7 +126,7 @@ body {
     align-items: center;
 }
 
-.container {
+.line {
     height: 4px;
     width: 100%;
     border-radius: .5rem .5rem 0rem 0rem ;
