@@ -84,8 +84,10 @@ body {
 }
 
 .tech-card {
+    width: 100%;
     display: flex;
     flex-flow: column;
+    align-items: center;
     gap: 4.75rem;
 }
 
@@ -117,10 +119,38 @@ body {
 
 /* MAIN CARD */
 .tech-card__main {
-    max-width: 311px;
     display: flex;
     flex-flow: column;
     align-items: center;
+    position: relative;
+}
+
+.green-main {
+    background-color: var(--GREEN);
+    height: 4px;
+    width: 100%;
+    border-radius: .5rem .5rem 0rem 0rem ;
+}
+
+.red-main {
+    background-color: var(--RED);
+    height: 4px;
+    width: 100%;
+    border-radius: .5rem .5rem 0rem 0rem ;
+}
+
+.yellow-main {
+    background-color: var(--YELLOW);
+    height: 4px;
+    width: 100%;
+    border-radius: .5rem .5rem 0rem 0rem ;
+}
+
+.blue-main {
+    background-color: var(--BLUE);
+    height: 4px;
+    width: 100%;
+    border-radius: .5rem .5rem 0rem 0rem ;
 }
 
 .tech-card__main-card {
@@ -129,7 +159,7 @@ body {
     padding: 1.6875rem 1.75rem 1.75rem 1.75rem;
     box-shadow: var(--CARD-SHADOW);
     background-color: var(--WHITE);
-    border-radius: .5rem;
+    border-radius: 0rem 0rem .5rem .5rem;
     display: flex;
     flex-flow: column;
     position: relative;
@@ -164,22 +194,17 @@ body {
 
 .green {
     margin-bottom: 1.5625rem;
-    border-top: 5px solid var(--GREEN);
 }
 
 .red {
     margin-bottom: 1.4375rem;
-    border-top: 5px solid var(--RED);
 }
 
 .yellow {
     margin-bottom: 1.5rem;
-    border-top: 5px solid var(--YELLOW);
+    
 }
 
-.blue {
-    border-top: 5px solid var(--BLUE);
-}
 
 /* DESKTOP */
 @media screen and (min-width: 992px) {
@@ -189,10 +214,7 @@ body {
 
     /* CARD */
     .tech-card {
-        display: flex;
-        flex-flow: column;
         gap: 4rem;
-        border: .125rem solid black;
     }
 
     /* HEADER */
@@ -218,67 +240,38 @@ body {
 
     /* MAIN CARD */
     .tech-card__main {
-        border: 2px solid blue;
-        max-width: 1110px;
-        display: flex;
-        flex-flow: column;
+        flex-flow: row;
+        gap: 1.875rem;
     }
     
     .tech-card__main-card {
-        max-width: 311px;
-        height: 222px;
-        padding: 1.6875rem 1.75rem 1.75rem 1.75rem;
-        box-shadow: var(--CARD-SHADOW);
-        background-color: var(--WHITE);
-        border-radius: .5rem;
-        display: flex;
-        flex-flow: column;
-        position: relative;
+        max-width: 350px;
+        height: 250px;
+        padding: 2rem;
     }
-    
-    .main-card__title {
-        font: var(--CARD-TITLE);
-        color: var(--GRAY);
-        margin-bottom: .0625rem;
-    }
-    
+   
     .main-card__subtext {
-        font: var(--CARD-TEXT);
-        color: var(--GRAY-50);
-        margin-bottom: 2.0625rem;
-        letter-spacing: .0056rem;
+        margin-bottom: 2.5rem;
     }
     
     .main-card__icon {
-        width: 57px;
-        height: 57px;
-        position: absolute;
-        bottom: 28px;
-        right: 28px;
-    }
-    
-    .main-card__icon img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 64px;
+        height: 64px;
+        bottom: 40px;
+        right: 40px;
     }
     
     .green {
-        margin-bottom: 1.5625rem;
-        border-top: 5px solid var(--GREEN);
+        margin-bottom: 0rem;
+
     }
     
     .red {
-        margin-bottom: 1.4375rem;
-        border-top: 5px solid var(--RED);
+        margin-bottom: 1.875rem;
     }
     
     .yellow {
-        margin-bottom: 1.5rem;
-        border-top: 5px solid var(--YELLOW);
+        margin-bottom: 0rem;
     }
     
-    .blue {
-        border-top: 5px solid var(--BLUE);
-    }
 }
